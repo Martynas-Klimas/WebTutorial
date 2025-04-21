@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    min-height: 200vh;
+}
+
+.outer-container{
+    border: 3px dashed black; 
+    width: 90vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+}
+
+.inner-container{
+    border: 2px solid blue;
+    width: 45%;
+    height: 80%;
+    margin: 50px auto;
+}
+
+.box{
+    width: 150px;
+    height: 100px;
+    color: #fff;
+    padding: 1rem;
+}
+
+/*if any parent has "position: relative", absolute position
+is calculated based on the position of the closest parent.*/
+.absolute{
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*left: -10000px still in html, just pushed away and not
+    visible on the page*/
+    /*z-index: 1; - higher z index, higher drawing priority*/
+}
+
+/*Relative to parent container without having to specify container position value*/
+.relative{
+    background-color: red;
+    position: relative;
+    top: 300px;
+    left: 50px;
+}
+ 
+/*Always in the same position on the screen*/
+.fixed{
+    background-color: green;
+    position:fixed;
+    top: 100px;
+}
+
+/*Stays within the page, until its container is above our viewing area*/
+.sticky{
+    background-color: yellow;
+    position: sticky;
+    top: 0;
+}
+
+/* Previous css for commented code */
+
+/* ///////////////////////////////// */
+
+html{
+    scroll-behavior: smooth; /*Smooth traveling in page by links*/
+}
+
+section{
+    height: 100vh;
+}
+
+.blue{background-color: blue;}
+.red{background-color: red;}
+.green{background-color: green;}
+
+header, footer{
+    color: white;
+    text-align: center;
+    height: 75px;
+}
+
+header {
+    font-size: 3rem;
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    font-size: 2rem;
+    background-color: black;
+    position: fixed; /*Element no longer spans the full page, since its out of the normal flow*/
+    bottom: 0;
+    width: 100%;
+    /* Or we can use position: sticky + bottom: 0*/
+}
+
+a:visited{
+    color: white;
+}
+
+.social{
+    background-color: royalblue;
+    color: #fff;
+    font-size: inherit;
+    padding: 1rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+}
+
+
+

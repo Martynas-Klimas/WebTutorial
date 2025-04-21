@@ -1,0 +1,37 @@
+body{
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.columns{
+    columns: 4 250px;
+    column-rule: 2px solid grey;
+    column-gap: 2rem;
+}
+
+.columns p{
+    margin-top: 0;
+}
+
+.columns h2{
+    margin-top: 0;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    break-inside: avoid;
+}
+
+/*Previously overriden by .columns p, because .columns p 
+is more specific than just .quote.*/
+.columns .quote{ 
+    margin: 1rem auto;
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    padding: 1rem;
+    column-span: all;
+}
+/*not wrapping the quote*/
+.nowrap{
+    white-space: nowrap;
+}
